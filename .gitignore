@@ -4,3 +4,6 @@ pawno/
 scriptfiles/
 
 gamemodes/main.amx
+
+server_log.txt
+svlog.txt
