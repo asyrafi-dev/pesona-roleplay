@@ -7,3 +7,5 @@ gamemodes/main.amx
 
 server_log.txt
 svlog.txt
+
+logs/
