@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 27, 2026 at 10:25 AM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Waktu pembuatan: 30 Bulan Mei 2026 pada 07.17
+-- Versi server: 10.4.32-MariaDB
+-- Versi PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `nugrh`
+-- Database: `nexera`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `actors`
+-- Struktur dari tabel `actors`
 --
 
 CREATE TABLE `actors` (
@@ -43,7 +43,7 @@ CREATE TABLE `actors` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `actors`
+-- Dumping data untuk tabel `actors`
 --
 
 INSERT INTO `actors` (`ID`, `ActorSkin`, `ActorName`, `ActorAnim`, `ActorInvul`, `ActorHealth`, `ActorX`, `ActorY`, `ActorZ`, `ActorA`, `ActorWorld`, `ActorInterior`) VALUES
@@ -150,7 +150,7 @@ INSERT INTO `actors` (`ID`, `ActorSkin`, `ActorName`, `ActorAnim`, `ActorInvul`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin_logs`
+-- Struktur dari tabel `admin_logs`
 --
 
 CREATE TABLE `admin_logs` (
@@ -162,7 +162,7 @@ CREATE TABLE `admin_logs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Dumping data for table `admin_logs`
+-- Dumping data untuk tabel `admin_logs`
 --
 
 INSERT INTO `admin_logs` (`ID`, `Prefix`, `Admin`, `AdminUCP`, `UCPTarget`) VALUES
@@ -172,7 +172,7 @@ INSERT INTO `admin_logs` (`ID`, `Prefix`, `Admin`, `AdminUCP`, `UCPTarget`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `armouries`
+-- Struktur dari tabel `armouries`
 --
 
 CREATE TABLE `armouries` (
@@ -186,18 +186,18 @@ CREATE TABLE `armouries` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Dumping data for table `armouries`
+-- Dumping data untuk tabel `armouries`
 --
 
 INSERT INTO `armouries` (`id`, `posx`, `posy`, `posz`, `interior`, `world`, `name`) VALUES
-(0, 969.069, 2460.94, 10.9001, 0, 0, 'Perlengkapan kepolisian'),
 (1, 367.705, 216.322, 1008.38, 3, 0, 'Armoury Police'),
+(2, 2754.4, 755.33, 13.7665, 0, 0, 'Kepolisian Nexotis'),
 (3, 1865.54, 2204.79, 10.8818, 0, 0, 'Peralatan & Persenjataan SAMSAT');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `atms`
+-- Struktur dari tabel `atms`
 --
 
 CREATE TABLE `atms` (
@@ -213,13 +213,12 @@ CREATE TABLE `atms` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Dumping data for table `atms`
+-- Dumping data untuk tabel `atms`
 --
 
 INSERT INTO `atms` (`ID`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `World`, `Interior`) VALUES
 (0, 1472.35, -2173.88, -9.54612, -0.6, 179.3, 178.468, 444, 4),
-(1, 952.358, 2451.49, 11.0801, 0, 0, -0.932823, 0, 0),
-(2, 396.211, -2072.23, 7.83594, 0, 0.3, -0.121246, 0, 0),
+(2, 391.852, -2056.71, 8.39212, 1.6, 1.6, -91.7212, 0, 0),
 (3, 1468.09, -1002.76, 9.05193, 0, 0, 42.7356, 999, 1),
 (4, 1186.37, -912.709, 43.3619, 0, 0, 97.2126, 0, 0),
 (5, 1920.21, -1786.22, 13.6706, 0, 0, 179.259, 0, 0),
@@ -276,7 +275,7 @@ INSERT INTO `atms` (`ID`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `World`, `Interior`) 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `avtreasure`
+-- Struktur dari tabel `avtreasure`
 --
 
 CREATE TABLE `avtreasure` (
@@ -293,7 +292,7 @@ CREATE TABLE `avtreasure` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `avtreasure`
+-- Dumping data untuk tabel `avtreasure`
 --
 
 INSERT INTO `avtreasure` (`ID`, `Owner_ID`, `InteroKey`, `FlagtufKey`, `FanciousKey`, `RareousKey`, `Intero`, `Flagtuf`, `Fancious`, `Rareous`) VALUES
@@ -303,12 +302,13 @@ INSERT INTO `avtreasure` (`ID`, `Owner_ID`, `InteroKey`, `FlagtufKey`, `Fancious
 (4, 4, 0, 0, 0, 0, 0, 0, 0, 0),
 (5, 5, 0, 0, 0, 0, 0, 0, 0, 0),
 (6, 6, 0, 0, 0, 0, 0, 0, 0, 0),
-(7, 7, 0, 0, 0, 0, 0, 0, 0, 0);
+(7, 7, 0, 0, 0, 0, 0, 0, 0, 0),
+(8, 8, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `badside_brankas`
+-- Struktur dari tabel `badside_brankas`
 --
 
 CREATE TABLE `badside_brankas` (
@@ -322,7 +322,7 @@ CREATE TABLE `badside_brankas` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bankpoints`
+-- Struktur dari tabel `bankpoints`
 --
 
 CREATE TABLE `bankpoints` (
@@ -335,7 +335,7 @@ CREATE TABLE `bankpoints` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Dumping data for table `bankpoints`
+-- Dumping data untuk tabel `bankpoints`
 --
 
 INSERT INTO `bankpoints` (`ID`, `X`, `Y`, `Z`, `World`, `Interior`) VALUES
@@ -351,7 +351,7 @@ INSERT INTO `bankpoints` (`ID`, `X`, `Y`, `Z`, `World`, `Interior`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `basement`
+-- Struktur dari tabel `basement`
 --
 
 CREATE TABLE `basement` (
@@ -386,7 +386,7 @@ CREATE TABLE `basement` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `basement`
+-- Dumping data untuk tabel `basement`
 --
 
 INSERT INTO `basement` (`ID`, `name`, `password`, `icon`, `locked`, `admin`, `vip`, `faction`, `family`, `extvw`, `extint`, `extposx`, `extposy`, `extposz`, `extposa`, `intvw`, `intint`, `intposx`, `intposy`, `intposz`, `intposa`, `inexitx`, `inexity`, `inexitz`, `outexitx`, `outexity`, `outexitz`, `outexita`) VALUES
@@ -395,7 +395,7 @@ INSERT INTO `basement` (`ID`, `name`, `password`, `icon`, `locked`, `admin`, `vi
 -- --------------------------------------------------------
 
 --
--- Table structure for table `biz`
+-- Struktur dari tabel `biz`
 --
 
 CREATE TABLE `biz` (
@@ -447,7 +447,7 @@ CREATE TABLE `biz` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bj_tables`
+-- Struktur dari tabel `bj_tables`
 --
 
 CREATE TABLE `bj_tables` (
@@ -465,7 +465,7 @@ CREATE TABLE `bj_tables` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Dumping data for table `bj_tables`
+-- Dumping data untuk tabel `bj_tables`
 --
 
 INSERT INTO `bj_tables` (`id`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `World`, `Interior`, `MinBet`, `MaxBet`) VALUES
@@ -491,7 +491,7 @@ INSERT INTO `bj_tables` (`id`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `World`, `Interi
 -- --------------------------------------------------------
 
 --
--- Table structure for table `buttons`
+-- Struktur dari tabel `buttons`
 --
 
 CREATE TABLE `buttons` (
@@ -523,18 +523,11 @@ CREATE TABLE `buttons` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `buttons`
+-- Dumping data untuk tabel `buttons`
 --
 
 INSERT INTO `buttons` (`ID`, `doormodel`, `faction`, `family`, `speed`, `bposx`, `bposy`, `bposz`, `bposrx`, `bposry`, `bposrz`, `doorposx`, `doorposy`, `doorposz`, `doorposrx`, `doorposry`, `doorposrz`, `dopenx`, `dopeny`, `dopenz`, `dopenrx`, `dopenry`, `dopenrz`, `world`, `interior`) VALUES
-(0, 3089, 2, -1, 2, 1745.32, -1115.95, 24.7113, 0, 0, 0, 1743.29, -1115.95, 24.3713, 0, 0, 0, 1741.78, -1115.95, 24.3713, 0, 0, 0, 0, 0),
-(1, 3089, 0, -1, 2, 1766.8, -1123.71, 28.7994, 0, 0, 89.8001, 1766.78, -1125.6, 28.4594, 0, 0, 90.8001, 1766.75, -1127.08, 28.4594, 0, 0, 90.8001, 0, 0),
-(2, 3089, 5, -1, 2, 1270.72, 697.637, 10.9973, -0.3, -0.2, 178.2, 1268.86, 697.655, 10.9675, 0, 0, 0, 1267.43, 697.655, 10.9675, 0, 0, 0, 0, 0),
-(3, 3089, 1, -1, 2, 1932.24, -2266.13, 14.7727, 0, 0, -91.1001, 1932.37, -2266.59, 14.3827, 0, 0, -90.6999, 1932.26, -2265.11, 14.3827, 0, 0, -88.8, 888, 8),
-(4, 3089, 3, -1, 2, 1360.16, -1844.99, 14.2584, 0, 0, 90, 1360.08, -1846.27, 13.8984, 0, 0, 90.9, 1360.06, -1844.81, 13.8984, 0, 0, 90.9, 0, 0),
-(5, 3089, 2, -1, 2, 1773.2, -1125.99, 28.8194, 0, 0, -90.5001, 1773.25, -1124.11, 28.4794, 0, 0, -91.0001, 1773.27, -1122.62, 28.4794, 0, 0, -91.0001, 0, 0),
 (6, 3089, 2, -1, 2, 1079.28, 1746.8, 11.5343, 0, 0, -176.6, 1081.08, 1746.73, 11.1343, 0, 0, -179.8, 1082.54, 1746.74, 11.1343, 0, 0, -179.8, 2, 1),
-(7, 3089, 1, -1, 2, 948.329, 2451.36, 11.4701, 0, 0, 0, 948.539, 2451.44, 11.0801, 0, 0, 0, 947.059, 2451.44, 11.0801, 0, 0, 0, 0, 0),
 (8, 2963, 0, -1, 2, 982.325, -53.0699, 1001.12, 0, 0, 0, 963.316, -50.9199, 1001.12, 0, 0, 0, 968.595, -53.2698, 1001.96, 0, 0, 0, 44, 3),
 (9, 3089, 5, -1, 2, 1271.27, 706.222, 11.3275, 0, 0, 88.8, 1271.24, 705.918, 10.9875, 0, 0, -90.1, 1271.24, 707.389, 10.9875, 0, 0, -90.1, 0, 0),
 (10, 3294, 5, -1, 2, 967.983, -52.1434, 1001.84, 0, 0, 0, 963.052, -50.2833, 1001.12, 0, 0, 0, 968.553, -53.1247, 1001.83, 90.8, 0.1, -179.8, 88, 3),
@@ -553,7 +546,7 @@ INSERT INTO `buttons` (`ID`, `doormodel`, `faction`, `family`, `speed`, `bposx`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `crafttables`
+-- Struktur dari tabel `crafttables`
 --
 
 CREATE TABLE `crafttables` (
@@ -573,7 +566,7 @@ CREATE TABLE `crafttables` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `damagelogs`
+-- Struktur dari tabel `damagelogs`
 --
 
 CREATE TABLE `damagelogs` (
@@ -588,7 +581,7 @@ CREATE TABLE `damagelogs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Dumping data for table `damagelogs`
+-- Dumping data untuk tabel `damagelogs`
 --
 
 INSERT INTO `damagelogs` (`ID`, `OwnerID`, `Date`, `Weapon`, `Damage`, `BodyPart`, `IssuerName`, `KorbanName`) VALUES
@@ -692,12 +685,75 @@ INSERT INTO `damagelogs` (`ID`, `OwnerID`, `Date`, `Weapon`, `Damage`, `BodyPart
 (98, 7, '27/05/2026 14:39:18', 'Splat', 4.95, 'Torso', 'Unknown', 'Alvin_Ytp'),
 (99, 7, '27/05/2026 15:56:46', 'Splat', 28.17, 'Torso', 'Unknown', 'Alvin_Ytp'),
 (100, 7, '27/05/2026 16:14:13', 'Splat', 4.95, 'Torso', 'Unknown', 'Alvin_Ytp'),
-(101, 7, '27/05/2026 16:16:05', 'Splat', 4.95, 'Torso', 'Unknown', 'Alvin_Ytp');
+(101, 7, '27/05/2026 16:16:05', 'Splat', 4.95, 'Torso', 'Unknown', 'Alvin_Ytp'),
+(102, 8, '29/05/2026 10:19:21', 'Splat', 27.62, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(103, 8, '29/05/2026 10:19:23', 'Splat', 30.76, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(104, 8, '29/05/2026 10:19:24', 'Splat', 28.34, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(105, 8, '29/05/2026 10:19:29', 'Splat', 31.42, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(106, 8, '29/05/2026 10:19:29', 'Splat', 3.3, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(107, 8, '29/05/2026 10:24:16', 'Splat', 26.94, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(108, 8, '29/05/2026 10:24:17', 'Splat', 29.53, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(109, 8, '29/05/2026 10:27:21', 'Splat', 33.1, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(110, 8, '29/05/2026 10:27:58', 'Splat', 4.95, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(111, 8, '29/05/2026 17:09:07', 'Splat', 20.89, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(112, 8, '29/05/2026 17:19:34', 'Splat', 21.33, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(113, 8, '29/05/2026 17:20:50', 'Splat', 21.2, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(114, 8, '29/05/2026 17:21:36', 'Splat', 20.53, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(115, 8, '29/05/2026 17:27:07', 'Splat', 4.95, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(116, 8, '29/05/2026 18:34:52', 'Splat', 35.17, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(117, 8, '29/05/2026 19:04:36', 'Splat', 27.25, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(118, 8, '29/05/2026 20:36:21', 'Splat', 26.86, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(119, 8, '29/05/2026 20:36:57', 'Splat', 18.79, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(120, 8, '29/05/2026 20:36:57', 'Splat', 18.79, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(121, 8, '29/05/2026 20:36:57', 'Splat', 18.79, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(122, 8, '29/05/2026 20:36:57', 'Splat', 18.79, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(123, 8, '29/05/2026 20:36:57', 'Splat', 23.97, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(124, 8, '29/05/2026 20:36:57', 'Splat', 18.79, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(127, 8, '29/05/2026 20:36:57', 'Splat', 23.97, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(126, 8, '29/05/2026 20:36:57', 'Splat', 18.79, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(125, 8, '29/05/2026 20:36:57', 'Splat', 18.79, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(128, 8, '29/05/2026 20:36:57', 'Splat', 18.79, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(129, 8, '29/05/2026 20:36:57', 'Splat', 18.79, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(130, 8, '29/05/2026 20:36:57', 'Splat', 18.79, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(131, 8, '29/05/2026 20:36:57', 'Splat', 18.79, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(132, 8, '29/05/2026 20:36:57', 'Splat', 18.79, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(133, 8, '29/05/2026 20:36:57', 'Splat', 18.79, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(134, 8, '29/05/2026 20:36:57', 'Splat', 23.97, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(135, 8, '29/05/2026 20:36:57', 'Splat', 18.79, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(136, 8, '29/05/2026 20:36:57', 'Splat', 18.79, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(137, 8, '29/05/2026 20:36:57', 'Splat', 18.79, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(138, 8, '29/05/2026 20:36:57', 'Splat', 18.79, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(139, 8, '29/05/2026 20:36:57', 'Splat', 18.79, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(140, 8, '29/05/2026 20:36:57', 'Splat', 18.79, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(141, 8, '29/05/2026 20:36:57', 'Splat', 18.79, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(142, 8, '29/05/2026 20:36:57', 'Splat', 18.79, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(143, 8, '29/05/2026 20:36:57', 'Splat', 18.79, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(144, 8, '29/05/2026 20:42:18', 'Splat', 20.53, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(145, 8, '29/05/2026 20:45:59', 'Splat', 21.2, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(146, 8, '29/05/2026 20:47:01', 'Splat', 21.39, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(147, 8, '29/05/2026 20:49:42', 'Splat', 4.95, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(148, 8, '29/05/2026 20:51:12', 'Splat', 20.99, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(149, 8, '29/05/2026 20:54:13', 'Splat', 4.95, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(150, 8, '29/05/2026 20:54:21', 'Splat', 20.93, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(151, 8, '29/05/2026 21:04:56', 'Splat', 4.95, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(152, 8, '29/05/2026 21:34:26', 'Splat', 21.14, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(153, 8, '29/05/2026 21:35:28', 'Splat', 21.16, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(154, 8, '29/05/2026 21:36:41', 'Splat', 21.09, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(155, 8, '29/05/2026 21:40:06', 'Splat', 20.74, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(156, 8, '29/05/2026 21:57:06', 'Splat', 20.81, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(157, 8, '29/05/2026 21:57:34', 'Splat', 21.09, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(158, 8, '29/05/2026 21:57:56', 'Splat', 26.57, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(159, 8, '29/05/2026 22:16:02', 'Splat', 4.95, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(160, 8, '29/05/2026 22:24:40', 'Splat', 21.48, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(161, 8, '29/05/2026 22:31:31', 'Splat', 22.02, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(162, 8, '30/05/2026 08:51:08', 'Splat', 6.06, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(163, 8, '30/05/2026 09:26:02', 'Splat', 4.95, 'Torso', 'Unknown', 'Nugrhh_Ganteng'),
+(164, 8, '30/05/2026 09:29:25', 'Splat', 165, 'Torso', 'Unknown', 'Nugrhh_Ganteng');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `demand_vehicles`
+-- Struktur dari tabel `demand_vehicles`
 --
 
 CREATE TABLE `demand_vehicles` (
@@ -726,7 +782,7 @@ CREATE TABLE `demand_vehicles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Dumping data for table `demand_vehicles`
+-- Dumping data untuk tabel `demand_vehicles`
 --
 
 INSERT INTO `demand_vehicles` (`id`, `ownerid`, `model`, `vehX`, `vehY`, `vehZ`, `vehA`, `damage0`, `damage1`, `damage2`, `damage3`, `health`, `maxhealth`, `bodyupgraded`, `bodybroken`, `fuel`, `locked`, `world`, `color1`, `color2`, `comp1`, `comp2`) VALUES
@@ -735,7 +791,7 @@ INSERT INTO `demand_vehicles` (`id`, `ownerid`, `model`, `vehX`, `vehY`, `vehZ`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `documents`
+-- Struktur dari tabel `documents`
 --
 
 CREATE TABLE `documents` (
@@ -761,7 +817,7 @@ CREATE TABLE `documents` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `doors`
+-- Struktur dari tabel `doors`
 --
 
 CREATE TABLE `doors` (
@@ -789,20 +845,19 @@ CREATE TABLE `doors` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `doors`
+-- Dumping data untuk tabel `doors`
 --
 
 INSERT INTO `doors` (`ID`, `name`, `password`, `icon`, `locked`, `admin`, `vip`, `faction`, `family`, `extvw`, `extint`, `extposx`, `extposy`, `extposz`, `extposa`, `intvw`, `intint`, `intposx`, `intposy`, `intposz`, `intposa`) VALUES
 (0, 'ADMIN', '', 19197, 0, 0, 0, 0, 0, 0, 0, 2104.24, 2678.92, 10.813, 269.52, 0, 6, 234.172, 1064.05, 1084.21, 359.385),
-(1, 'HELIPED', '', 19130, 0, 0, 0, 1, -1, 0, 0, 955.956, 2468.55, 10.9001, 176.334, 0, 0, 935.789, 2478.52, 23.2101, 268.911),
 (2, 'Pembuatan SIM & Plat', '', 19130, 0, 0, 0, 0, -1, 0, 0, 2101.17, -1360.14, 24.0243, 179.788, 3, 3, -2026.93, -104.151, 1035.17, 180.94),
-(8, 'RSU NEXOTIS || Helipad', '', 19130, 0, 0, 0, 2, -1, 0, 0, 1761.86, -1098.47, 28.1893, 181.775, 0, 0, 1768.97, -1106.34, 38.1213, 4.76539),
+(8, 'RSU Arivena || Helipad', '', 19130, 0, 0, 0, 2, -1, 0, 0, 1761.86, -1098.47, 28.1893, 181.775, 0, 0, 1768.97, -1106.34, 38.1213, 4.76539),
 (14, '(( Roleplay School ))', '', 19130, 0, 0, 0, 0, -1, 0, 0, 1285.4, -1329.44, 13.5487, 85.8017, 256, 0, 1060.2, 2447.73, 301.5, 91.4941),
-(21, 'Lapas NEXOTIS', '', 19130, 0, 0, 0, 1, -1, 0, 0, 1169.7, 1262.84, 10.882, 1.24002, 788, 10, 246.434, 107.433, 1003.22, 0.990513),
+(21, 'Lapas Arivena', '', 19130, 0, 0, 0, 1, -1, 0, 0, 1169.7, 1262.84, 10.882, 1.24002, 788, 10, 246.434, 107.433, 1003.22, 0.990513),
 (24, 'Diamond Royal Casino', '', 19130, 0, 0, 0, 0, -1, 0, 0, 556.275, -1477.37, 14.6886, 93.1141, 777, 1, 2233.96, 1713.99, 1023.15, 183.351),
 (25, 'Bramble Club', '', 19130, 0, 0, 0, 0, -1, 0, 0, -1896.56, 487.184, 35.1719, 90.2635, 57, 3, -2636.7, 1402.84, 906.461, 2.61711),
 (26, 'Pacific Standard Public Deposit Bank', '', 19130, 0, 0, 0, 0, -1, 0, 0, 1462.36, -1011.15, 26.8438, 181.012, 999, 1, 1472.26, -1006.85, 9.05193, 44.9521),
-(27, 'Balai Kota NEXOTIS', '', 19130, 0, 0, 0, 0, -1, 0, 0, 1123.74, -2037.01, 69.8862, 269.497, 99, 3, 1365.73, 1575.54, 17.0003, 269.928),
+(27, 'Balai Kota Arivena', '', 19130, 0, 0, 0, 0, -1, 0, 0, 1123.74, -2037.01, 69.8862, 269.497, 99, 3, 1365.73, 1575.54, 17.0003, 269.928),
 (28, 'Gnocchi Casino Basement', '', 19130, 0, 0, 0, 0, -1, 2, 0, 2488.85, 2397.18, 4.21094, 270.037, 777, 1, 2250.01, 1593.36, 1019.36, 359.205),
 (30, 'Bedroom', '', 19130, 0, 0, 0, 0, -1, 12, 9, 2316.32, -1010.74, 1054.72, 270.797, 12, 5, 2231.81, -1112.18, 1050.88, 272.634),
 (31, 'Rahasia', '', 19130, 0, 0, 0, 0, -1, 0, 0, -358.135, 2239.24, 42.4844, 104.612, 87, 1, 1473.39, -37.5916, 9.71901, 270.072),
@@ -831,15 +886,15 @@ INSERT INTO `doors` (`ID`, `name`, `password`, `icon`, `locked`, `admin`, `vip`,
 (57, 'SECRET ROOM', '', 19130, 0, 0, 0, 0, 0, 24842, 17, 503.504, -11.6451, 1000.68, 91.9575, 2342, 6, 759.493, 1443.28, 1102.7, 178.23),
 (58, 'Mafia del Nord', '', 19130, 0, 0, 0, 0, 20, 0, 0, -2491.86, 2363.13, 10.2729, 280.131, 5820, 5, 1261.56, -785.38, 1091.91, 266.649),
 (61, 'Rusun Juniper Hollow', '', 19130, 0, 0, 0, 0, -1, 0, 0, -2524.14, 1216.2, 37.5431, 95.6796, 2, 171, -981.786, -1111.37, 129.268, 90.8911),
-(64, 'Gedung Administrasi Akademi Kepolisian NEXOTIS', '', 19130, 0, 0, 0, 0, -1, 0, 0, 1110.76, 1328.74, 10.862, 269.779, 0, 3, 389.32, 173.934, 1008.38, 88.1925),
-(65, 'Ruang Latihan Tembak Akademi Kepolisian NEXOTIS', '', 19130, 0, 0, 0, 0, -1, 0, 0, 1105.16, 1294.45, 10.862, 1.73167, 71, 2, 1007.9, 1675.53, -16.4808, 181.656),
+(64, 'Gedung Administrasi Akademi Kepolisian Arivena', '', 19130, 0, 0, 0, 0, -1, 0, 0, 1110.76, 1328.74, 10.862, 269.779, 0, 3, 389.32, 173.934, 1008.38, 88.1925),
+(65, 'Ruang Latihan Tembak Akademi Kepolisian Arivena', '', 19130, 0, 0, 0, 0, -1, 0, 0, 1105.16, 1294.45, 10.862, 1.73167, 71, 2, 1007.9, 1675.53, -16.4808, 181.656),
 (80, '(( Staff Only ))', '', 19130, 0, 1, 0, 0, -1, 256, 0, 1050.07, 2451.34, 301.5, 270.096, 256, 0, 1023.48, 2452.98, 302.598, 268.819),
 (84, 'Uber Office', '', 19130, 0, 0, 0, 0, -1, 0, 0, -2001.81, -940.654, 33.0359, 268.755, 444, 4, 1478.61, -2174.96, -10.6731, 359.857);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `dropped_items`
+-- Struktur dari tabel `dropped_items`
 --
 
 CREATE TABLE `dropped_items` (
@@ -861,7 +916,7 @@ CREATE TABLE `dropped_items` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `dynamic_deer`
+-- Struktur dari tabel `dynamic_deer`
 --
 
 CREATE TABLE `dynamic_deer` (
@@ -875,7 +930,7 @@ CREATE TABLE `dynamic_deer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Dumping data for table `dynamic_deer`
+-- Dumping data untuk tabel `dynamic_deer`
 --
 
 INSERT INTO `dynamic_deer` (`ID`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`) VALUES
@@ -983,7 +1038,7 @@ INSERT INTO `dynamic_deer` (`ID`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `faction_brankas`
+-- Struktur dari tabel `faction_brankas`
 --
 
 CREATE TABLE `faction_brankas` (
@@ -995,7 +1050,7 @@ CREATE TABLE `faction_brankas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `faction_brankas`
+-- Dumping data untuk tabel `faction_brankas`
 --
 
 INSERT INTO `faction_brankas` (`FID`, `ID`, `Item`, `Model`, `Quantity`) VALUES
@@ -1010,7 +1065,7 @@ INSERT INTO `faction_brankas` (`FID`, `ID`, `Item`, `Model`, `Quantity`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `faction_garages`
+-- Struktur dari tabel `faction_garages`
 --
 
 CREATE TABLE `faction_garages` (
@@ -1032,26 +1087,24 @@ CREATE TABLE `faction_garages` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Dumping data for table `faction_garages`
+-- Dumping data untuk tabel `faction_garages`
 --
 
 INSERT INTO `faction_garages` (`id`, `posx`, `posy`, `posz`, `gposx`, `gposy`, `gposz`, `gposspawnx`, `gposspawny`, `gposspawnz`, `gposspawna`, `world`, `interior`, `type`, `name`) VALUES
-(0, 1851.72, 2206.01, 10.8203, 1851.72, 2206.01, 10.8203, 1843.27, 2201.13, 10.8203, 355.177, 0, 0, 1, 'SAMSAT Spawn Static Vehicle'),
-(1, 1792.24, -1127.02, 24.1013, 1792.24, -1127.02, 24.1013, 1800.81, -1115.03, 24.1013, 359.002, 0, 0, 2, 'EMS Vehicle Spawn Point'),
-(3, 1263.79, 769.851, 10.8875, 1263.79, 769.851, 10.8875, 1296.26, 774.306, 10.9675, 271.24, 0, 0, 5, 'Bengkel Bennys'),
-(4, 982.46, 2465.56, 10.8549, 982.46, 2465.56, 10.8549, 988.639, 2455.05, 10.8449, 176.789, 0, 0, 1, 'GARASI POLISI'),
+(0, 2743.03, 693.78, 10.9165, 2743.03, 693.78, 10.9165, 2743.03, 693.78, 10.9165, 274.544, 0, 0, 1, 'Kepolisian Nexotis'),
+(1, 2195.2, 910.999, 10.8573, 2195.2, 910.999, 10.8573, 2195.2, 910.999, 10.8573, 90.1019, 0, 0, 2, 'Rumah Sakit Nexotis'),
 (5, 1360.4, -1854.74, 13.5928, 1360.4, -1854.74, 13.5928, 1354.38, -1848.3, 13.5928, 77.9354, 0, 0, 3, 'Garasi Kantor McDouglas'),
 (6, 1172.49, 1341.15, 10.832, 1172.49, 1341.15, 10.832, 1166.41, 1334.72, 10.832, 89.176, 0, 0, 1, 'Police Academy Vehicle Spawn Point'),
 (7, -2027.63, -961.576, 32.1874, -2027.63, -961.576, 32.1874, -2035.16, -957.799, 32.1874, 0.027976, 0, 0, 6, 'Uber Office Vehicle Spawn'),
 (10, -2042.15, -904.177, 32.1874, -2042.15, -904.177, 32.1874, -2036.1, -895.631, 31.795, 184.292, 0, 0, 6, 'Uber Garage'),
 (11, 1029.03, -1357.18, 13.7266, 1029.03, -1357.18, 13.7266, 1025.77, -1353.13, 13.7266, 359.966, 0, 0, 7, 'Loving Donuts - Static Vehicle Spawn'),
 (12, 739.311, -1348.4, 13.5098, 739.311, -1348.4, 13.5098, 742.712, -1338.17, 13.5323, 269.053, 0, 0, 8, 'Pewarta Berita Vehicle Spawn'),
-(15, -296.662, 1334.4, 54.6986, -296.662, 1334.4, 54.6986, -291.942, 1326.86, 54.5017, 82.0128, 0, 0, 11, '+NEXOTIS Vehicle Spawn Point');
+(15, -296.662, 1334.4, 54.6986, -296.662, 1334.4, 54.6986, -291.942, 1326.86, 54.5017, 82.0128, 0, 0, 11, '+Arivena Vehicle Spawn Point');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `faction_logs`
+-- Struktur dari tabel `faction_logs`
 --
 
 CREATE TABLE `faction_logs` (
@@ -1065,7 +1118,7 @@ CREATE TABLE `faction_logs` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `faction_vaultlogs`
+-- Struktur dari tabel `faction_vaultlogs`
 --
 
 CREATE TABLE `faction_vaultlogs` (
@@ -1081,7 +1134,7 @@ CREATE TABLE `faction_vaultlogs` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `families`
+-- Struktur dari tabel `families`
 --
 
 CREATE TABLE `families` (
@@ -1115,16 +1168,16 @@ CREATE TABLE `families` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Dumping data for table `families`
+-- Dumping data untuk tabel `families`
 --
 
 INSERT INTO `families` (`ID`, `LeaderID`, `LeaderName`, `Name`, `Money`, `DirtyMoney`, `VW`, `VI`, `VX`, `VY`, `VZ`, `DW`, `DI`, `DX`, `DY`, `DZ`, `GW`, `GI`, `GX`, `GY`, `GZ`, `GSW`, `GSI`, `GSX`, `GSY`, `GSZ`, `GSA`) VALUES
-(0, 3, 'Vhay_Galazkha', 'ADMIN', 84880, 99000, 0, 6, 241.898, 1075.28, 1084.19, 0, 6, 241.876, 1071.58, 1084.19, 0, 0, 2101.73, 2671.15, 10.813, 0, 0, 2101.73, 2671.15, 10.813, 89.7728);
+(0, 3, 'Vhay_Galazkha', 'ADMIN', 80636, 99000, 0, 6, 241.898, 1075.28, 1084.19, 0, 6, 241.876, 1071.58, 1084.19, 0, 0, 2101.73, 2671.15, 10.813, 0, 0, 2101.73, 2671.15, 10.813, 89.7728);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `farmplants`
+-- Struktur dari tabel `farmplants`
 --
 
 CREATE TABLE `farmplants` (
@@ -1137,7 +1190,7 @@ CREATE TABLE `farmplants` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `farmplants`
+-- Dumping data untuk tabel `farmplants`
 --
 
 INSERT INTO `farmplants` (`id`, `posX`, `posY`, `posZ`, `plantType`, `spawnTimer`) VALUES
@@ -1146,7 +1199,7 @@ INSERT INTO `farmplants` (`id`, `posX`, `posY`, `posZ`, `plantType`, `spawnTimer
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fcrafts`
+-- Struktur dari tabel `fcrafts`
 --
 
 CREATE TABLE `fcrafts` (
@@ -1160,7 +1213,7 @@ CREATE TABLE `fcrafts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Dumping data for table `fcrafts`
+-- Dumping data untuk tabel `fcrafts`
 --
 
 INSERT INTO `fcrafts` (`id`, `posx`, `posy`, `posz`, `interior`, `world`, `type`) VALUES
@@ -1169,7 +1222,7 @@ INSERT INTO `fcrafts` (`id`, `posx`, `posy`, `posz`, `interior`, `world`, `type`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fivem_labels`
+-- Struktur dari tabel `fivem_labels`
 --
 
 CREATE TABLE `fivem_labels` (
@@ -1186,7 +1239,7 @@ CREATE TABLE `fivem_labels` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `fivem_labels`
+-- Dumping data untuk tabel `fivem_labels`
 --
 
 INSERT INTO `fivem_labels` (`ID`, `TogPickup`, `PickupID`, `Text`, `PosX`, `PosY`, `PosZ`, `PosA`, `PosWorld`, `PosInterior`) VALUES
@@ -1195,7 +1248,7 @@ INSERT INTO `fivem_labels` (`ID`, `TogPickup`, `PickupID`, `Text`, `PosX`, `PosY
 -- --------------------------------------------------------
 
 --
--- Table structure for table `garbages`
+-- Struktur dari tabel `garbages`
 --
 
 CREATE TABLE `garbages` (
@@ -1213,7 +1266,7 @@ CREATE TABLE `garbages` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `garbages`
+-- Dumping data untuk tabel `garbages`
 --
 
 INSERT INTO `garbages` (`id`, `garbageModel`, `garbageCapacity`, `garbageX`, `garbageY`, `garbageZ`, `garbageRx`, `garbageRy`, `garbageRz`, `garbageInterior`, `garbageWorld`) VALUES
@@ -1718,7 +1771,7 @@ INSERT INTO `garbages` (`id`, `garbageModel`, `garbageCapacity`, `garbageX`, `ga
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gudang`
+-- Struktur dari tabel `gudang`
 --
 
 CREATE TABLE `gudang` (
@@ -1733,7 +1786,7 @@ CREATE TABLE `gudang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `gudang`
+-- Dumping data untuk tabel `gudang`
 --
 
 INSERT INTO `gudang` (`ID`, `Name`, `Cost_30Day`, `PosX`, `PosY`, `PosZ`, `World`, `Interior`) VALUES
@@ -1744,7 +1797,7 @@ INSERT INTO `gudang` (`ID`, `Name`, `Cost_30Day`, `PosX`, `PosY`, `PosZ`, `World
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gudang_brankas`
+-- Struktur dari tabel `gudang_brankas`
 --
 
 CREATE TABLE `gudang_brankas` (
@@ -1756,7 +1809,7 @@ CREATE TABLE `gudang_brankas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `gudang_brankas`
+-- Dumping data untuk tabel `gudang_brankas`
 --
 
 INSERT INTO `gudang_brankas` (`Owner`, `ID`, `Item`, `Model`, `Quantity`) VALUES
@@ -1765,7 +1818,7 @@ INSERT INTO `gudang_brankas` (`Owner`, `ID`, `Item`, `Model`, `Quantity`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gunpos`
+-- Struktur dari tabel `gunpos`
 --
 
 CREATE TABLE `gunpos` (
@@ -1818,7 +1871,7 @@ CREATE TABLE `gunpos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `gunpos`
+-- Dumping data untuk tabel `gunpos`
 --
 
 INSERT INTO `gunpos` (`Owner`, `PosX_0`, `PosY_0`, `PosZ_0`, `RotX_0`, `RotY_0`, `RotZ_0`, `Bone_0`, `Hidden_0`, `Tint_0`, `PosX_1`, `PosY_1`, `PosZ_1`, `RotX_1`, `RotY_1`, `RotZ_1`, `Bone_1`, `Hidden_1`, `Tint_1`, `PosX_2`, `PosY_2`, `PosZ_2`, `RotX_2`, `RotY_2`, `RotZ_2`, `Bone_2`, `Hidden_2`, `Tint_2`, `PosX_3`, `PosY_3`, `PosZ_3`, `RotX_3`, `RotY_3`, `RotZ_3`, `Bone_3`, `Hidden_3`, `Tint_3`, `PosX_4`, `PosY_4`, `PosZ_4`, `RotX_4`, `RotY_4`, `RotZ_4`, `Bone_4`, `Hidden_4`, `Tint_4`) VALUES
@@ -1827,12 +1880,13 @@ INSERT INTO `gunpos` (`Owner`, `PosX_0`, `PosY_0`, `PosZ_0`, `RotX_0`, `RotY_0`,
 (4, -0.007, 0.082, -0.058, -69.7, 89.9, 2, 7, 0, 0, 0, -0.036, 0.125, -90.8, 1.4, 3.7, 8, 0, 0, 0.186, -0.163, 0.163, -4.1, 158.3, 10.9, 1, 0, 0, -0.187, 0.178, 0.092, -4.1, 42.7, -1, 1, 0, 0, -0.063, -0.052, 0.047, 119.5, -113.5, -29, 8, 0, 0),
 (5, -0.007, 0.082, -0.058, -69.7, 89.9, 2, 7, 0, 0, 0, -0.036, 0.125, -90.8, 1.4, 3.7, 8, 0, 0, 0.186, -0.163, 0.163, -4.1, 158.3, 10.9, 1, 0, 0, -0.187, 0.178, 0.092, -4.1, 42.7, -1, 1, 0, 0, -0.063, -0.052, 0.047, 119.5, -113.5, -29, 8, 0, 0),
 (6, -0.007, 0.082, -0.058, -69.7, 89.9, 2, 7, 0, 0, 0, -0.036, 0.125, -90.8, 1.4, 3.7, 8, 0, 0, 0.186, -0.163, 0.163, -4.1, 158.3, 10.9, 1, 0, 0, -0.187, 0.178, 0.092, -4.1, 42.7, -1, 1, 0, 0, -0.063, -0.052, 0.047, 119.5, -113.5, -29, 8, 0, 0),
-(7, -0.007, 0.082, -0.058, -69.7, 89.9, 2, 7, 0, 0, 0, -0.036, 0.125, -90.8, 1.4, 3.7, 8, 0, 0, 0.186, -0.163, 0.163, -4.1, 158.3, 10.9, 1, 0, 0, -0.187, 0.178, 0.092, -4.1, 42.7, -1, 1, 0, 0, -0.063, -0.052, 0.047, 119.5, -113.5, -29, 8, 0, 0);
+(7, -0.007, 0.082, -0.058, -69.7, 89.9, 2, 7, 0, 0, 0, -0.036, 0.125, -90.8, 1.4, 3.7, 8, 0, 0, 0.186, -0.163, 0.163, -4.1, 158.3, 10.9, 1, 0, 0, -0.187, 0.178, 0.092, -4.1, 42.7, -1, 1, 0, 0, -0.063, -0.052, 0.047, 119.5, -113.5, -29, 8, 0, 0),
+(8, -0.007, 0.082, -0.058, -69.7, 89.9, 2, 7, 0, 0, 0, -0.036, 0.125, -90.8, 1.4, 3.7, 8, 0, 0, 0.186, -0.163, 0.163, -4.1, 158.3, 10.9, 1, 0, 0, -0.187, 0.178, 0.092, -4.1, 42.7, -1, 1, 0, 0, -0.063, -0.052, 0.047, 119.5, -113.5, -29, 8, 0, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `houses`
+-- Struktur dari tabel `houses`
 --
 
 CREATE TABLE `houses` (
@@ -1866,7 +1920,7 @@ CREATE TABLE `houses` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `house_brankas`
+-- Struktur dari tabel `house_brankas`
 --
 
 CREATE TABLE `house_brankas` (
@@ -1880,7 +1934,7 @@ CREATE TABLE `house_brankas` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `house_holster`
+-- Struktur dari tabel `house_holster`
 --
 
 CREATE TABLE `house_holster` (
@@ -1893,7 +1947,7 @@ CREATE TABLE `house_holster` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `inventory`
+-- Struktur dari tabel `inventory`
 --
 
 CREATE TABLE `inventory` (
@@ -1905,7 +1959,7 @@ CREATE TABLE `inventory` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `inventory`
+-- Dumping data untuk tabel `inventory`
 --
 
 INSERT INTO `inventory` (`Owner_ID`, `invent_ID`, `invent_Item`, `invent_Model`, `invent_Quantity`) VALUES
@@ -1937,12 +1991,15 @@ INSERT INTO `inventory` (`Owner_ID`, `invent_ID`, `invent_Item`, `invent_Model`,
 (7, 101, 'Smartphone', 18873, 1),
 (7, 102, 'Sawit', 19636, 1),
 (7, 105, 'Plastik', 1265, 7),
-(7, 106, 'Minyak Sawit', 19820, 5);
+(7, 106, 'Minyak Sawit', 19820, 5),
+(8, 112, 'Chicken BBQ', 2355, 20),
+(8, 113, 'Coconut Water', 19564, 20),
+(8, 114, 'Elektronik Rusak', 2041, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `invoices`
+-- Struktur dari tabel `invoices`
 --
 
 CREATE TABLE `invoices` (
@@ -1958,7 +2015,7 @@ CREATE TABLE `invoices` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kanabis`
+-- Struktur dari tabel `kanabis`
 --
 
 CREATE TABLE `kanabis` (
@@ -1975,7 +2032,7 @@ CREATE TABLE `kanabis` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `kanabis`
+-- Dumping data untuk tabel `kanabis`
 --
 
 INSERT INTO `kanabis` (`id`, `kanabisModel`, `kanabisX`, `kanabisY`, `kanabisZ`, `kanabisRx`, `kanabisRy`, `kanabisRz`, `kanabisInterior`, `kanabisWorld`) VALUES
@@ -2006,7 +2063,7 @@ INSERT INTO `kanabis` (`id`, `kanabisModel`, `kanabisX`, `kanabisY`, `kanabisZ`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lockers`
+-- Struktur dari tabel `lockers`
 --
 
 CREATE TABLE `lockers` (
@@ -2021,11 +2078,11 @@ CREATE TABLE `lockers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Dumping data for table `lockers`
+-- Dumping data untuk tabel `lockers`
 --
 
 INSERT INTO `lockers` (`id`, `posx`, `posy`, `posz`, `interior`, `world`, `type`, `name`) VALUES
-(0, 967.886, 2470.06, 10.9001, 0, 0, 1, 'Locker Kepolisian'),
+(0, 2195.73, 919.457, 12.9673, 0, 0, 2, 'Rumah Sakit Nexotis'),
 (1, 1371.12, 1615.93, 15.6703, 3, 99, 4, 'Loker baju'),
 (2, 351.332, 216.317, 1008.38, 3, 100, 8, 'Locker Pewarta'),
 (3, 1867.15, 2195.71, 10.8818, 0, 0, 1, 'SAMSAT Locker'),
@@ -2035,12 +2092,13 @@ INSERT INTO `lockers` (`id`, `posx`, `posy`, `posz`, `interior`, `world`, `type`
 (7, 1487.73, -2146.81, -10.6731, 4, 444, 6, 'Uber Office Locker'),
 (8, 351.504, 216.653, 1008.38, 3, 0, 1, 'Locker'),
 (9, 1264.77, 708.212, 10.8875, 0, 0, 5, 'Locker Bennys'),
-(14, -322.128, 1291.65, 48.2753, 0, 0, 11, '+NEXOTIS Faction Locker');
+(10, 2753.6, 746.772, 13.7665, 0, 0, 1, 'Kepolisian Nexotis'),
+(14, -322.128, 1291.65, 48.2753, 0, 0, 11, '+Arivena Faction Locker');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `log_fmoney`
+-- Struktur dari tabel `log_fmoney`
 --
 
 CREATE TABLE `log_fmoney` (
@@ -2054,7 +2112,7 @@ CREATE TABLE `log_fmoney` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `log_transaction`
+-- Struktur dari tabel `log_transaction`
 --
 
 CREATE TABLE `log_transaction` (
@@ -2070,7 +2128,7 @@ CREATE TABLE `log_transaction` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mapicons`
+-- Struktur dari tabel `mapicons`
 --
 
 CREATE TABLE `mapicons` (
@@ -2085,7 +2143,7 @@ CREATE TABLE `mapicons` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `mapicons`
+-- Dumping data untuk tabel `mapicons`
 --
 
 INSERT INTO `mapicons` (`ID`, `iconvw`, `iconint`, `iconpos0`, `iconpos1`, `iconpos2`, `icontype`, `iconcolor`) VALUES
@@ -2141,7 +2199,7 @@ INSERT INTO `mapicons` (`ID`, `iconvw`, `iconint`, `iconpos0`, `iconpos1`, `icon
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mdc_arrestrecords`
+-- Struktur dari tabel `mdc_arrestrecords`
 --
 
 CREATE TABLE `mdc_arrestrecords` (
@@ -2155,7 +2213,7 @@ CREATE TABLE `mdc_arrestrecords` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mdc_broadcasts`
+-- Struktur dari tabel `mdc_broadcasts`
 --
 
 CREATE TABLE `mdc_broadcasts` (
@@ -2166,7 +2224,7 @@ CREATE TABLE `mdc_broadcasts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Dumping data for table `mdc_broadcasts`
+-- Dumping data untuk tabel `mdc_broadcasts`
 --
 
 INSERT INTO `mdc_broadcasts` (`id`, `time`, `description`, `issuer`) VALUES
@@ -2175,7 +2233,7 @@ INSERT INTO `mdc_broadcasts` (`id`, `time`, `description`, `issuer`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mdc_charges`
+-- Struktur dari tabel `mdc_charges`
 --
 
 CREATE TABLE `mdc_charges` (
@@ -2191,7 +2249,7 @@ CREATE TABLE `mdc_charges` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mdc_warrants`
+-- Struktur dari tabel `mdc_warrants`
 --
 
 CREATE TABLE `mdc_warrants` (
@@ -2206,7 +2264,7 @@ CREATE TABLE `mdc_warrants` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `newsstands`
+-- Struktur dari tabel `newsstands`
 --
 
 CREATE TABLE `newsstands` (
@@ -2222,7 +2280,7 @@ CREATE TABLE `newsstands` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `newsstands`
+-- Dumping data untuk tabel `newsstands`
 --
 
 INSERT INTO `newsstands` (`id`, `X`, `Y`, `Z`, `Rx`, `Ry`, `Rz`, `Interior`, `World`) VALUES
@@ -2288,7 +2346,7 @@ INSERT INTO `newsstands` (`id`, `X`, `Y`, `Z`, `Rx`, `Ry`, `Rz`, `Interior`, `Wo
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ores`
+-- Struktur dari tabel `ores`
 --
 
 CREATE TABLE `ores` (
@@ -2305,7 +2363,7 @@ CREATE TABLE `ores` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `ores`
+-- Dumping data untuk tabel `ores`
 --
 
 INSERT INTO `ores` (`id`, `Type`, `posX`, `posY`, `posZ`, `posRx`, `posRy`, `posRz`, `Interior`, `World`) VALUES
@@ -2383,7 +2441,7 @@ INSERT INTO `ores` (`id`, `Type`, `posX`, `posY`, `posZ`, `posRx`, `posRy`, `pos
 -- --------------------------------------------------------
 
 --
--- Table structure for table `phone_contacts`
+-- Struktur dari tabel `phone_contacts`
 --
 
 CREATE TABLE `phone_contacts` (
@@ -2396,7 +2454,7 @@ CREATE TABLE `phone_contacts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `phone_contacts`
+-- Dumping data untuk tabel `phone_contacts`
 --
 
 INSERT INTO `phone_contacts` (`contactID`, `contactName`, `contactNumber`, `contactUnread`, `contactOwnerID`, `contactBlocked`) VALUES
@@ -2406,7 +2464,7 @@ INSERT INTO `phone_contacts` (`contactID`, `contactName`, `contactNumber`, `cont
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pilkada_voters`
+-- Struktur dari tabel `pilkada_voters`
 --
 
 CREATE TABLE `pilkada_voters` (
@@ -2420,7 +2478,7 @@ CREATE TABLE `pilkada_voters` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `player_bans`
+-- Struktur dari tabel `player_bans`
 --
 
 CREATE TABLE `player_bans` (
@@ -2438,7 +2496,7 @@ CREATE TABLE `player_bans` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `player_characters`
+-- Struktur dari tabel `player_characters`
 --
 
 CREATE TABLE `player_characters` (
@@ -2559,16 +2617,17 @@ CREATE TABLE `player_characters` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `player_characters`
+-- Dumping data untuk tabel `player_characters`
 --
 
 INSERT INTO `player_characters` (`pID`, `Char_RegisterDate`, `Char_LastLogin`, `Char_IP`, `Char_SSN`, `Char_Name`, `Char_AdminName`, `Char_DonatorTag`, `Char_Admin`, `Char_Apprentice`, `Char_Steward`, `Char_StewTime`, `Char_VIP`, `Char_VIPTime`, `Char_Money`, `Char_DirtyMoney`, `Char_BankMoney`, `Char_SlipSalary`, `Char_BankNumber`, `Char_WaterInBucket`, `Char_CasinoChip`, `Char_PosX`, `Char_PosY`, `Char_PosZ`, `Char_Health`, `Char_Armor`, `Char_WID`, `Char_IntID`, `Char_Birthday`, `Char_Origin`, `Char_Gender`, `Char_BodyHeight`, `Char_BodyWeight`, `Char_Skin`, `Char_Level`, `Char_Uniform`, `Char_Job`, `Char_InDoor`, `Char_InHouse`, `Char_InBiz`, `Char_InRusun`, `Char_Hunger`, `Char_Thirst`, `Char_Stress`, `Char_Faction`, `Char_FactionRank`, `Char_Badge`, `Char_OnDuty`, `Char_UsingUniform`, `Char_UsingPoliceVest`, `Char_Family`, `Char_FamilyRank`, `Char_Jailed`, `Char_JailCell`, `Char_JailAdmin`, `Char_JailTime`, `Char_JailDur`, `Char_JailReason`, `Char_JailFine`, `Char_Arrest`, `Char_ArrestTime`, `Char_ComServing`, `Char_Warn`, `Char_DinarPoints`, `Char_TogPM`, `Char_TogGOOC`, `Char_TogLogin`, `Char_TogLevel`, `Char_TogAdv`, `Char_TogAdmCmd`, `Char_TogMoneyTD`, `Char_XmasGiftTime`, `Char_RenderSetting`, `Char_Radio`, `Char_Earphone`, `Char_Boombox`, `Char_HuntingRifle`, `Char_HasGudangID`, `Char_GudangRentTime`, `Char_Knockdown`, `Char_KnockdownTime`, `Char_KTPTime`, `Char_GVL1Lic`, `Char_GVL1LicTime`, `Char_GVL2Lic`, `Char_GVL2LicTime`, `Char_MBLic`, `Char_MBLicTime`, `Char_BLic`, `Char_BLicTime`, `Char_Air1Lic`, `Char_Air1LicTime`, `Char_Air2Lic`, `Char_Air2LicTime`, `Char_FirearmLic`, `Char_FirearmLicTime`, `Char_HuntingLic`, `Char_HuntingLicTime`, `Char_SPClaimed`, `Char_MowingDelay`, `Char_SweeperDelay`, `Char_ForkliftDelay`, `Char_TrashCollectorDelay`, `Char_PizzaDelay`, `Char_TaxMinute`, `Char_HouseSharedID`, `Char_TutorialPassed`, `Char_Hours`, `Char_Minutes`, `Char_Seconds`, `Char_KTP`, `Char_DCTime`, `Char_FightStyle`, `Char_UCP`) VALUES
-(7, '2026-05-15 01:44:19', '2026-05-27 16:18:52', '127.0.0.1', 153122685, 'Alvin_Ytp', 'Vynyt', '', 6, 0, 0, 0, 0, 0, 88020, 0, 100000, 250, 660741, 0, 86400, 1517.96, -2216.59, 14.047, 149, 0, 0, 0, '20/07/2000', 'Indonesia', 1, 170, 54, 2, 11, 183, 11, -1, -1, -1, -1, 75, 48, 48, 4, 4, 0, 0, 0, 0, -1, 0, 0, -1, '', 0, 0, '', 0, 0, 0, 0, 0, 25, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1782182362, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 551, -1, 0, 54, 7, 22, 1, 0, 4, 'Vynyt');
+(7, '2026-05-15 01:44:19', '2026-05-27 16:18:52', '127.0.0.1', 153122685, 'Alvin_Ytp', 'Vynyt', '', 6, 0, 0, 0, 0, 0, 88020, 0, 100000, 250, 660741, 0, 86400, 1517.96, -2216.59, 14.047, 149, 0, 0, 0, '20/07/2000', 'Indonesia', 1, 170, 54, 2, 11, 183, 11, -1, -1, -1, -1, 75, 48, 48, 4, 4, 0, 0, 0, 0, -1, 0, 0, -1, '', 0, 0, '', 0, 0, 0, 0, 0, 25, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1782182362, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 551, -1, 0, 54, 7, 22, 1, 0, 4, 'Vynyt'),
+(8, '2026-05-29 08:55:27', '2026-05-30 09:30:29', '127.0.0.1', 574918513, 'Nugrhh_Ganteng', 'Nugrhh', '', 6, 0, 0, 0, 3, 0, 99989599, 0, 15406, 0, 914678, 0, 0, -2114.3, -2343.05, 30.969, 250, 0, 0, 0, '15/12/2011', 'Indonesia', 1, 160, 45, 59, 1, 1, 0, -1, -1, -1, -1, 10, 37, 0, 1, 16, 0, 0, 0, 0, -1, 0, 0, -1, '', 0, 0, '', 0, 0, 0, 0, 0, 25, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 179, -1, 0, 2, 56, 6, 0, 0, 4, 'Nugrhh');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `player_clothes`
+-- Struktur dari tabel `player_clothes`
 --
 
 CREATE TABLE `player_clothes` (
@@ -2625,7 +2684,7 @@ CREATE TABLE `player_clothes` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `player_fishes`
+-- Struktur dari tabel `player_fishes`
 --
 
 CREATE TABLE `player_fishes` (
@@ -2638,7 +2697,7 @@ CREATE TABLE `player_fishes` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `player_phones`
+-- Struktur dari tabel `player_phones`
 --
 
 CREATE TABLE `player_phones` (
@@ -2656,7 +2715,7 @@ CREATE TABLE `player_phones` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `player_phones`
+-- Dumping data untuk tabel `player_phones`
 --
 
 INSERT INTO `player_phones` (`ID`, `phoneOwner`, `phoneOwnerName`, `phoneNumber`, `phoneWallpaper`, `WhatsappInstalled`, `SpotifyInstalled`, `TwitterInstalled`, `YellowInstalled`, `UberInstalled`, `TwitterLoggedIn`) VALUES
@@ -2666,12 +2725,13 @@ INSERT INTO `player_phones` (`ID`, `phoneOwner`, `phoneOwnerName`, `phoneNumber`
 (4, 4, 'TOD ANJASSS', '08288956403', 5, 0, 0, 0, 0, 0, 0),
 (5, 5, 'Anjassss Pukimay', '08284922532', 5, 0, 0, 0, 0, 0, 0),
 (6, 6, 'Kont WKWK', '08284331877', 5, 0, 0, 0, 0, 0, 0),
-(7, 7, 'Alvin Ytp', '08281993192', 5, 1, 1, 0, 0, 0, 0);
+(7, 7, 'Alvin Ytp', '08281993192', 5, 1, 1, 0, 0, 0, 0),
+(8, 8, 'Nugrhh Ganteng', '08288929768', 5, 1, 1, 1, 0, 1, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `player_toys`
+-- Struktur dari tabel `player_toys`
 --
 
 CREATE TABLE `player_toys` (
@@ -2760,7 +2820,7 @@ CREATE TABLE `player_toys` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `player_twitter`
+-- Struktur dari tabel `player_twitter`
 --
 
 CREATE TABLE `player_twitter` (
@@ -2770,10 +2830,17 @@ CREATE TABLE `player_twitter` (
   `Password` varchar(32) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
+--
+-- Dumping data untuk tabel `player_twitter`
+--
+
+INSERT INTO `player_twitter` (`ID`, `OwnerID`, `Username`, `Password`) VALUES
+(1, 8, 'Nugrhhh', 'nugrhh2011');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `player_ucp`
+-- Struktur dari tabel `player_ucp`
 --
 
 CREATE TABLE `player_ucp` (
@@ -2793,17 +2860,16 @@ CREATE TABLE `player_ucp` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `player_ucp`
+-- Dumping data untuk tabel `player_ucp`
 --
 
 INSERT INTO `player_ucp` (`ID`, `UCP`, `IP`, `Password`, `claimedSP`, `FreeCar`, `Blocked`, `Block_Duration`, `Block_Reason`, `Block_AdminName`, `Block_IssuedDate`, `Register_Date`, `Last_Login`) VALUES
-(5, 'Vynyt', '127.0.0.1', '$2y$12$Apawalph1pH7QfuRJbd54eBeXv4vV4LMIZtczR1HPWeQZE5XNZCti', 0, 0, 0, 0, '', '', '', '2026-05-15 01:43:54', '2026-05-15 01:43:54');
-(6, 'Nugrhh', '127.0.0.1', 'nugrhhnihdek', 0, 0, 0, 0, '', '', '', '2026-05-15 01:43:54', '2026-05-15 01:43:54');
+(6, 'Nugrhh', '127.0.0.1', '$2y$12$AZJ/gV88ghkycYbYPurpRO97sR1ZyahkOzCXxBldgkbJdUjcuZnuS', 1, 0, 0, 0, '', '', '', '2026-05-29 08:55:15', '2026-05-29 08:55:15');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `player_vehicles`
+-- Struktur dari tabel `player_vehicles`
 --
 
 CREATE TABLE `player_vehicles` (
@@ -2865,7 +2931,7 @@ CREATE TABLE `player_vehicles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `player_vehicles`
+-- Dumping data untuk tabel `player_vehicles`
 --
 
 INSERT INTO `player_vehicles` (`id`, `PVeh_Owner`, `PVeh_ModelID`, `PVeh_Price`, `PVeh_Parked`, `PVeh_Familied`, `PVeh_Housed`, `PVeh_RentTime`, `PVeh_Rental`, `PVeh_Plate`, `PVeh_PlateTime`, `PVeh_Health`, `PVeh_BodyUpgraded`, `PVeh_BodyBroken`, `PVeh_MaxHealth`, `PVeh_Fuel`, `PVeh_Locked`, `PVeh_Mod0`, `PVeh_Mod1`, `PVeh_Mod2`, `PVeh_Mod3`, `PVeh_Mod4`, `PVeh_Mod5`, `PVeh_Mod6`, `PVeh_Mod7`, `PVeh_Mod8`, `PVeh_Mod9`, `PVeh_Mod10`, `PVeh_Mod11`, `PVeh_Mod12`, `PVeh_Mod13`, `PVeh_Mod14`, `PVeh_Mod15`, `PVeh_Mod16`, `PVeh_Damage0`, `PVeh_Damage1`, `PVeh_Damage2`, `PVeh_Damage3`, `PVeh_PosX`, `PVeh_PosY`, `PVeh_PosZ`, `PVeh_PosA`, `PVeh_Neon`, `PVeh_Paintjob`, `PVeh_Color1`, `PVeh_Color2`, `PVeh_World`, `PVeh_Interior`, `PVeh_Impounded`, `PVeh_ImpoundDuration`, `PVeh_ImpoundFee`, `PVeh_ImpoundReason`, `PVeh_Insuranced`, `PVeh_TireLocked`, `PVeh_DCTime`) VALUES
@@ -2880,7 +2946,7 @@ INSERT INTO `player_vehicles` (`id`, `PVeh_Owner`, `PVeh_ModelID`, `PVeh_Price`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `player_warns`
+-- Struktur dari tabel `player_warns`
 --
 
 CREATE TABLE `player_warns` (
@@ -2896,7 +2962,7 @@ CREATE TABLE `player_warns` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `player_weapons`
+-- Struktur dari tabel `player_weapons`
 --
 
 CREATE TABLE `player_weapons` (
@@ -2944,7 +3010,7 @@ CREATE TABLE `player_weapons` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `player_weapons`
+-- Dumping data untuk tabel `player_weapons`
 --
 
 INSERT INTO `player_weapons` (`ID`, `Owner_ID`, `Type1`, `Type2`, `Type3`, `Type4`, `Type5`, `Type6`, `Type7`, `Type8`, `Type9`, `Type10`, `Type11`, `Type12`, `Type13`, `Gun1`, `Gun2`, `Gun3`, `Gun4`, `Gun5`, `Gun6`, `Gun7`, `Gun8`, `Gun9`, `Gun10`, `Gun11`, `Gun12`, `Gun13`, `Ammo1`, `Ammo2`, `Ammo3`, `Ammo4`, `Ammo5`, `Ammo6`, `Ammo7`, `Ammo8`, `Ammo9`, `Ammo10`, `Ammo11`, `Ammo12`, `Ammo13`) VALUES
@@ -2953,12 +3019,13 @@ INSERT INTO `player_weapons` (`ID`, `Owner_ID`, `Type1`, `Type2`, `Type3`, `Type
 (3, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (4, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (5, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(6, 7, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(6, 7, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `public_garages`
+-- Struktur dari tabel `public_garages`
 --
 
 CREATE TABLE `public_garages` (
@@ -2983,7 +3050,7 @@ CREATE TABLE `public_garages` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `public_garages`
+-- Dumping data untuk tabel `public_garages`
 --
 
 INSERT INTO `public_garages` (`ID`, `PG_Name`, `PG_GreenX`, `PG_GreenY`, `PG_GreenZ`, `PG_GreenWorld`, `PG_GreenInterior`, `PG_RedX`, `PG_RedY`, `PG_RedZ`, `PG_RedWorld`, `PG_RedInterior`, `PG_SpawnX`, `PG_SpawnY`, `PG_SpawnZ`, `PG_SpawnA`, `PG_SpawnWorld`, `PG_SpawnInterior`) VALUES
@@ -2995,7 +3062,6 @@ INSERT INTO `public_garages` (`ID`, `PG_Name`, `PG_GreenX`, `PG_GreenY`, `PG_Gre
 (5, 'BALAI KOTA', 0, 0, 0, 0, 0, 1277.56, -2035.7, 58.9971, 0, 0, 1269.5, -2010.92, 59.1485, 180.108, 0, 0),
 (6, 'Garasi Pencucian Batu', 0, 0, 0, 0, 0, -82.279, 1341.66, 10.8472, 0, 0, -94.7863, 1339.61, 10.4277, 5.36735, 0, 0),
 (7, 'garasi umum', 0, 0, 0, 0, 0, 1560.04, -2250.8, 13.5469, 0, 0, 1560.13, -2257.61, 13.5461, 262.084, 0, 0),
-(8, 'LSG Medical Center', 1173.96, -1361.53, 14.3, 0, 0, 1767.07, -1083.45, 23.9609, 0, 0, 1783.17, -1070.77, 23.9609, 87.9816, 0, 0),
 (9, 'Peternak', 0, 0, 0, 0, 0, 323.233, 1161.38, 8.54939, 0, 0, 334.424, 1175.31, 8.36561, 180.242, 0, 0),
 (10, 'garasi umum', 0, 0, 0, 0, 0, -1108.17, -1620.99, 76.3672, 0, 0, -1108.33, -1655.27, 76.3672, 270.677, 0, 0),
 (11, 'Bengkel Bennys LV', 0, 0, 0, 0, 0, 1318.2, 770.814, 10.8875, 0, 0, 1330.04, 770.366, 10.8875, 179.685, 0, 0),
@@ -3015,7 +3081,7 @@ INSERT INTO `public_garages` (`ID`, `PG_Name`, `PG_GreenX`, `PG_GreenY`, `PG_Gre
 (25, 'Pekerjaan Electric', 0, 0, 0, 0, 0, -2395.66, -608.246, 132.648, 0, 0, -2399.18, -592.926, 132.648, 124.626, 0, 0),
 (26, 'Bank Pacific', 0, 0, 0, 0, 0, 1547.18, -1024.36, 23.9062, 0, 0, 1558.63, -1014.11, 23.9062, 179.238, 0, 0),
 (27, 'SCHOOL', 0, 0, 0, 0, 0, 1279.52, -1347.16, 13.3671, 0, 0, 1272.73, -1337.56, 13.3454, 94.5722, 0, 0),
-(28, '+NEXOTIS Resto', 0, 0, 0, 0, 0, -291.146, 1312.76, 54.1827, 0, 0, -294.322, 1322.7, 54.4039, 84.1827, 0, 0),
+(28, '+Arivena Resto', 0, 0, 0, 0, 0, -291.146, 1312.76, 54.1827, 0, 0, -294.322, 1322.7, 54.4039, 84.1827, 0, 0),
 (29, 'GARKOT PEWARTA', 0, 0, 0, 0, 0, 611.857, -1301.89, 14.7313, 0, 0, 603.762, -1286.76, 15.6267, 279.622, 0, 0),
 (30, 'SIM', 0, 0, 0, 0, 0, 2106.73, -1364.8, 23.9844, 0, 0, 2106.54, -1371.07, 23.9844, 182.146, 0, 0),
 (31, 'Garasi umum SAMSAT', 0, 0, 0, 0, 0, 991.513, 2413.68, 10.8549, 0, 0, 989.725, 2418.28, 10.8549, 90.9031, 0, 0),
@@ -3026,7 +3092,7 @@ INSERT INTO `public_garages` (`ID`, `PG_Name`, `PG_GreenX`, `PG_GreenY`, `PG_Gre
 -- --------------------------------------------------------
 
 --
--- Table structure for table `redeem`
+-- Struktur dari tabel `redeem`
 --
 
 CREATE TABLE `redeem` (
@@ -3045,7 +3111,7 @@ CREATE TABLE `redeem` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rentals`
+-- Struktur dari tabel `rentals`
 --
 
 CREATE TABLE `rentals` (
@@ -3067,12 +3133,12 @@ CREATE TABLE `rentals` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `rentals`
+-- Dumping data untuk tabel `rentals`
 --
 
 INSERT INTO `rentals` (`ID`, `Name`, `Model1`, `Model2`, `Cost1`, `Cost2`, `PosX`, `PosY`, `PosZ`, `SpawnX`, `SpawnY`, `SpawnZ`, `SpawnA`, `World`, `Interior`) VALUES
 (0, 'Boat Rental Point', 453, 452, 4000, 8000, 149.252, -1817.89, 3.74675, 136.292, -1822.68, -0.563881, 179.157, 0, 0),
-(2, 'Santa Marina Beach Rental', 462, 586, 100, 250, 379.243, -2020.7, 7.83009, 373.695, -2020.56, 7.67188, 358.342, 0, 0),
+(2, 'Santa Marina Beach Rental', 462, 586, 100, 250, 376.14, -1998.92, 7.83594, 373.192, -1999.02, 7.67188, 2.13368, 0, 0),
 (3, 'LS Airport Rental', 462, 586, 5000, 10000, 1570.2, -2241.99, 13.5379, 1561.81, -2241.09, 13.5469, 89.9275, 0, 0),
 (4, 'Market Station Rental', 462, 586, 5000, 10000, 809.794, -1353.78, 13.54, 801.893, -1353.06, 13.3906, 359.688, 0, 0),
 (7, 'Vehicle Rental Point', 462, 586, 5000, 7500, -1982.96, 104.575, 27.6875, -1990.36, 100.373, 27.5391, 88.4312, 0, 0),
@@ -3081,7 +3147,7 @@ INSERT INTO `rentals` (`ID`, `Name`, `Model1`, `Model2`, `Cost1`, `Cost2`, `PosX
 -- --------------------------------------------------------
 
 --
--- Table structure for table `roadsigns`
+-- Struktur dari tabel `roadsigns`
 --
 
 CREATE TABLE `roadsigns` (
@@ -3098,7 +3164,7 @@ CREATE TABLE `roadsigns` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `roadsigns`
+-- Dumping data untuk tabel `roadsigns`
 --
 
 INSERT INTO `roadsigns` (`id`, `objid`, `posx`, `posy`, `posz`, `posrx`, `posry`, `posrz`, `interior`, `world`) VALUES
@@ -3853,7 +3919,7 @@ INSERT INTO `roadsigns` (`id`, `objid`, `posx`, `posy`, `posz`, `posrx`, `posry`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `robberies`
+-- Struktur dari tabel `robberies`
 --
 
 CREATE TABLE `robberies` (
@@ -3870,7 +3936,7 @@ CREATE TABLE `robberies` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `robberies`
+-- Dumping data untuk tabel `robberies`
 --
 
 INSERT INTO `robberies` (`ID`, `Robbery_X`, `Robbery_Y`, `Robbery_Z`, `Robbery_RX`, `Robbery_RY`, `Robbery_RZ`, `Robbery_World`, `Robbery_Interior`, `Robbery_Cooldown`) VALUES
@@ -3899,7 +3965,7 @@ INSERT INTO `robberies` (`ID`, `Robbery_X`, `Robbery_Y`, `Robbery_Z`, `Robbery_R
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rusun`
+-- Struktur dari tabel `rusun`
 --
 
 CREATE TABLE `rusun` (
@@ -3917,7 +3983,7 @@ CREATE TABLE `rusun` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `rusun`
+-- Dumping data untuk tabel `rusun`
 --
 
 INSERT INTO `rusun` (`ID`, `Name`, `OwnerName`, `OwnerID`, `Cost_30Day`, `PosX`, `PosY`, `PosZ`, `PosA`, `World`, `Interior`) VALUES
@@ -3997,7 +4063,7 @@ INSERT INTO `rusun` (`ID`, `Name`, `OwnerName`, `OwnerID`, `Cost_30Day`, `PosX`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rusun_brankas`
+-- Struktur dari tabel `rusun_brankas`
 --
 
 CREATE TABLE `rusun_brankas` (
@@ -4011,7 +4077,7 @@ CREATE TABLE `rusun_brankas` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `salary`
+-- Struktur dari tabel `salary`
 --
 
 CREATE TABLE `salary` (
@@ -4026,7 +4092,7 @@ CREATE TABLE `salary` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `server_tags`
+-- Struktur dari tabel `server_tags`
 --
 
 CREATE TABLE `server_tags` (
@@ -4049,7 +4115,7 @@ CREATE TABLE `server_tags` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `shops`
+-- Struktur dari tabel `shops`
 --
 
 CREATE TABLE `shops` (
@@ -4063,7 +4129,7 @@ CREATE TABLE `shops` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `shops`
+-- Dumping data untuk tabel `shops`
 --
 
 INSERT INTO `shops` (`ID`, `type`, `shopX`, `shopY`, `shopZ`, `shopVw`, `shopInt`) VALUES
@@ -4114,7 +4180,7 @@ INSERT INTO `shops` (`ID`, `type`, `shopX`, `shopY`, `shopZ`, `shopVw`, `shopInt
 -- --------------------------------------------------------
 
 --
--- Table structure for table `speedcam`
+-- Struktur dari tabel `speedcam`
 --
 
 CREATE TABLE `speedcam` (
@@ -4131,7 +4197,7 @@ CREATE TABLE `speedcam` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `speedcam`
+-- Dumping data untuk tabel `speedcam`
 --
 
 INSERT INTO `speedcam` (`ID`, `scvw`, `scint`, `scx`, `scy`, `scz`, `scrx`, `scry`, `scrz`, `scspeed`) VALUES
@@ -4266,7 +4332,7 @@ INSERT INTO `speedcam` (`ID`, `scvw`, `scint`, `scx`, `scy`, `scz`, `scrx`, `scr
 -- --------------------------------------------------------
 
 --
--- Table structure for table `stuffs`
+-- Struktur dari tabel `stuffs`
 --
 
 CREATE TABLE `stuffs` (
@@ -4289,16 +4355,16 @@ CREATE TABLE `stuffs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `stuffs`
+-- Dumping data untuk tabel `stuffs`
 --
 
 INSERT INTO `stuffs` (`id`, `rusunreset`, `taxtiming`, `polisimoneyvault`, `emsmoneyvault`, `burgershotmoneyvault`, `pemermoneyvault`, `dinarbucksmoneyvault`, `ubermoneyvault`, `bennysmoneyvault`, `fox11moneyvault`, `automaxmoneyvault`, `handovermoneyvault`, `srimersingmoneyvault`, `putridelimoneyvault`, `texaschickenmoneyvault`) VALUES
-(0, 1781372067, 1779991266, 0, 46310115, 93, 0, 39837756, 0, 0, 3020718, 35038193, 77002265, 26401060, 0, 0);
+(0, 1781372067, 1780620975, 0, 43068407, 93, 0, 37049113, 0, 0, 2809268, 32585519, 77002265, 26401060, 0, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `trees`
+-- Struktur dari tabel `trees`
 --
 
 CREATE TABLE `trees` (
@@ -4316,7 +4382,7 @@ CREATE TABLE `trees` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `trees`
+-- Dumping data untuk tabel `trees`
 --
 
 INSERT INTO `trees` (`id`, `Type`, `posX`, `posY`, `posZ`, `posRx`, `posRy`, `posRz`, `Interior`, `World`, `Health`) VALUES
@@ -4492,7 +4558,7 @@ INSERT INTO `trees` (`id`, `Type`, `posX`, `posY`, `posZ`, `posRx`, `posRy`, `po
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tweets`
+-- Struktur dari tabel `tweets`
 --
 
 CREATE TABLE `tweets` (
@@ -4502,10 +4568,29 @@ CREATE TABLE `tweets` (
   `TweetDate` char(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
+--
+-- Dumping data untuk tabel `tweets`
+--
+
+INSERT INTO `tweets` (`ID`, `TweetFrom`, `TweetMessage`, `TweetDate`) VALUES
+(1, 'Nugrhhh', 'Halo', '29/05/2026 09:59:01'),
+(1, 'Nugrhhh', 'nexotis 1jt', '29/05/2026 10:15:09'),
+(1, 'Nugrhhh', 'nexotot', '29/05/2026 10:15:35'),
+(1, 'Nugrhhh', '12', '29/05/2026 10:18:08'),
+(1, 'Nugrhhh', 'anjing lu kontol', '29/05/2026 10:29:24'),
+(1, 'Nugrhhh', 'anjing lc apaan 50k seminggu', '29/05/2026 18:28:36'),
+(1, 'Nugrhhh', 'kontol anj', '29/05/2026 18:29:00'),
+(1, 'Nugrhhh', 'jual lc 50k buat depo bu banget', '29/05/2026 18:33:37'),
+(1, 'Nugrhhh', 'anjing', '29/05/2026 19:06:04'),
+(1, 'Nugrhhh', 'kaishkaishkaishkaishkaishvkaishkaishkaishkaishkaishkaishkaish', '29/05/2026 19:06:34'),
+(1, 'Nugrhhh', 'anjing', '29/05/2026 21:17:10'),
+(1, 'Nugrhhh', 'memek', '29/05/2026 22:08:11'),
+(1, 'Nugrhhh', 'anjing luh', '30/05/2026 08:43:49');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `vaults`
+-- Struktur dari tabel `vaults`
 --
 
 CREATE TABLE `vaults` (
@@ -4520,12 +4605,12 @@ CREATE TABLE `vaults` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Dumping data for table `vaults`
+-- Dumping data untuk tabel `vaults`
 --
 
 INSERT INTO `vaults` (`id`, `posx`, `posy`, `posz`, `world`, `interior`, `type`, `name`) VALUES
-(0, 970.167, 2464.57, 10.9001, 0, 0, 1, 'Brangkas Kepolisian'),
-(1, 1264.5, 683.254, 10.8875, 0, 0, 5, 'Bengkel Bennys Kota NEXOTIS Vault'),
+(0, 2194.01, 919.336, 12.9673, 0, 0, 2, 'Rumah Sakit Nexotis'),
+(1, 1264.5, 683.254, 10.8875, 0, 0, 5, 'Bengkel Bennys Kota Arivena Vault'),
 (2, 1354.38, -1833.04, 13.5974, 0, 0, 3, 'Lemari McDouglas'),
 (3, 377.166, -178.055, 1000.63, 44, 17, 7, 'Loving Donuts - Vault'),
 (4, 1752.7, -1111.9, 24.1013, 0, 0, 2, 'EMS Vault'),
@@ -4533,13 +4618,14 @@ INSERT INTO `vaults` (`id`, `posx`, `posy`, `posz`, `world`, `interior`, `type`,
 (6, 351.334, 199.122, 1008.38, 100, 3, 8, 'Brangkas Pewarta'),
 (7, 351.589, 197.384, 1008.38, 0, 3, 1, 'Brankas Barang'),
 (8, 1367.52, 1604.27, 15.6703, 99, 3, 4, 'pemerintah'),
-(12, -330.817, 1294.47, 54.3635, 0, 0, 11, '+NEXOTIS Faction Vault'),
+(9, 2753.03, 749.461, 13.7665, 0, 0, 1, 'Kepolisian Nexotis'),
+(12, -330.817, 1294.47, 54.3635, 0, 0, 11, '+Arivena Faction Vault'),
 (13, 242.687, 1858.76, 14.084, 69, 0, 1, 'Brangkas Sitaan');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `vehicle_bagasi`
+-- Struktur dari tabel `vehicle_bagasi`
 --
 
 CREATE TABLE `vehicle_bagasi` (
@@ -4553,7 +4639,7 @@ CREATE TABLE `vehicle_bagasi` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `vehicle_holster`
+-- Struktur dari tabel `vehicle_holster`
 --
 
 CREATE TABLE `vehicle_holster` (
@@ -4566,7 +4652,7 @@ CREATE TABLE `vehicle_holster` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `vendings`
+-- Struktur dari tabel `vendings`
 --
 
 CREATE TABLE `vendings` (
@@ -4583,7 +4669,7 @@ CREATE TABLE `vendings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `vendings`
+-- Dumping data untuk tabel `vendings`
 --
 
 INSERT INTO `vendings` (`ID`, `World`, `Interior`, `X`, `Y`, `Z`, `RX`, `RY`, `RZ`, `Type`) VALUES
@@ -4640,7 +4726,7 @@ INSERT INTO `vendings` (`ID`, `World`, `Interior`, `X`, `Y`, `Z`, `RX`, `RY`, `R
 -- --------------------------------------------------------
 
 --
--- Table structure for table `vtoys`
+-- Struktur dari tabel `vtoys`
 --
 
 CREATE TABLE `vtoys` (
@@ -4663,7 +4749,7 @@ CREATE TABLE `vtoys` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `whatsapp_chats`
+-- Struktur dari tabel `whatsapp_chats`
 --
 
 CREATE TABLE `whatsapp_chats` (
@@ -4677,7 +4763,7 @@ CREATE TABLE `whatsapp_chats` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `whatsapp_chats`
+-- Dumping data untuk tabel `whatsapp_chats`
 --
 
 INSERT INTO `whatsapp_chats` (`ID`, `chatID`, `chatTimestamp`, `chatMessage`, `chatSender`, `chatNumber`, `chatOwner`) VALUES
@@ -4687,7 +4773,7 @@ INSERT INTO `whatsapp_chats` (`ID`, `chatID`, `chatTimestamp`, `chatMessage`, `c
 -- --------------------------------------------------------
 
 --
--- Table structure for table `whitelists`
+-- Struktur dari tabel `whitelists`
 --
 
 CREATE TABLE `whitelists` (
@@ -4703,17 +4789,16 @@ CREATE TABLE `whitelists` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `whitelists`
+-- Dumping data untuk tabel `whitelists`
 --
 
 INSERT INTO `whitelists` (`id`, `ucp`, `nickadmin`, `adutyname`, `verify`, `recovery`, `date`, `discordid`, `allowed`) VALUES
-(5, 'Vynyt', 'Vynyt', 'Vynyt', -1, -1, '', '', 0);
-(6, 'Nugrhh', 'Nugrhh', 'Nugrhh', -1, -1, '', '', 0);
+(6, 'Nugrhh', 'Nugrhh', 'Nugrhh', -1, -1, '', '12345678909876', 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xmas_trees`
+-- Struktur dari tabel `xmas_trees`
 --
 
 CREATE TABLE `xmas_trees` (
@@ -4731,7 +4816,7 @@ CREATE TABLE `xmas_trees` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `yellowpages`
+-- Struktur dari tabel `yellowpages`
 --
 
 CREATE TABLE `yellowpages` (
@@ -4747,675 +4832,675 @@ CREATE TABLE `yellowpages` (
 --
 
 --
--- Indexes for table `actors`
+-- Indeks untuk tabel `actors`
 --
 ALTER TABLE `actors`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `admin_logs`
+-- Indeks untuk tabel `admin_logs`
 --
 ALTER TABLE `admin_logs`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `armouries`
+-- Indeks untuk tabel `armouries`
 --
 ALTER TABLE `armouries`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `atms`
+-- Indeks untuk tabel `atms`
 --
 ALTER TABLE `atms`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `avtreasure`
+-- Indeks untuk tabel `avtreasure`
 --
 ALTER TABLE `avtreasure`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `badside_brankas`
+-- Indeks untuk tabel `badside_brankas`
 --
 ALTER TABLE `badside_brankas`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `bankpoints`
+-- Indeks untuk tabel `bankpoints`
 --
 ALTER TABLE `bankpoints`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `biz`
+-- Indeks untuk tabel `biz`
 --
 ALTER TABLE `biz`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `bj_tables`
+-- Indeks untuk tabel `bj_tables`
 --
 ALTER TABLE `bj_tables`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `buttons`
+-- Indeks untuk tabel `buttons`
 --
 ALTER TABLE `buttons`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `crafttables`
+-- Indeks untuk tabel `crafttables`
 --
 ALTER TABLE `crafttables`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `damagelogs`
+-- Indeks untuk tabel `damagelogs`
 --
 ALTER TABLE `damagelogs`
   ADD KEY `Index 1` (`ID`);
 
 --
--- Indexes for table `demand_vehicles`
+-- Indeks untuk tabel `demand_vehicles`
 --
 ALTER TABLE `demand_vehicles`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `doors`
+-- Indeks untuk tabel `doors`
 --
 ALTER TABLE `doors`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `dropped_items`
+-- Indeks untuk tabel `dropped_items`
 --
 ALTER TABLE `dropped_items`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `dynamic_deer`
+-- Indeks untuk tabel `dynamic_deer`
 --
 ALTER TABLE `dynamic_deer`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `faction_brankas`
+-- Indeks untuk tabel `faction_brankas`
 --
 ALTER TABLE `faction_brankas`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `faction_garages`
+-- Indeks untuk tabel `faction_garages`
 --
 ALTER TABLE `faction_garages`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `faction_logs`
+-- Indeks untuk tabel `faction_logs`
 --
 ALTER TABLE `faction_logs`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `faction_vaultlogs`
+-- Indeks untuk tabel `faction_vaultlogs`
 --
 ALTER TABLE `faction_vaultlogs`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `families`
+-- Indeks untuk tabel `families`
 --
 ALTER TABLE `families`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `farmplants`
+-- Indeks untuk tabel `farmplants`
 --
 ALTER TABLE `farmplants`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `fcrafts`
+-- Indeks untuk tabel `fcrafts`
 --
 ALTER TABLE `fcrafts`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `fivem_labels`
+-- Indeks untuk tabel `fivem_labels`
 --
 ALTER TABLE `fivem_labels`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `garbages`
+-- Indeks untuk tabel `garbages`
 --
 ALTER TABLE `garbages`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `gudang`
+-- Indeks untuk tabel `gudang`
 --
 ALTER TABLE `gudang`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `gudang_brankas`
+-- Indeks untuk tabel `gudang_brankas`
 --
 ALTER TABLE `gudang_brankas`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `gunpos`
+-- Indeks untuk tabel `gunpos`
 --
 ALTER TABLE `gunpos`
   ADD PRIMARY KEY (`Owner`) USING BTREE;
 
 --
--- Indexes for table `houses`
+-- Indeks untuk tabel `houses`
 --
 ALTER TABLE `houses`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `house_brankas`
+-- Indeks untuk tabel `house_brankas`
 --
 ALTER TABLE `house_brankas`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `house_holster`
+-- Indeks untuk tabel `house_holster`
 --
 ALTER TABLE `house_holster`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `inventory`
+-- Indeks untuk tabel `inventory`
 --
 ALTER TABLE `inventory`
   ADD PRIMARY KEY (`invent_ID`);
 
 --
--- Indexes for table `invoices`
+-- Indeks untuk tabel `invoices`
 --
 ALTER TABLE `invoices`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `kanabis`
+-- Indeks untuk tabel `kanabis`
 --
 ALTER TABLE `kanabis`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `lockers`
+-- Indeks untuk tabel `lockers`
 --
 ALTER TABLE `lockers`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `mapicons`
+-- Indeks untuk tabel `mapicons`
 --
 ALTER TABLE `mapicons`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `mdc_arrestrecords`
+-- Indeks untuk tabel `mdc_arrestrecords`
 --
 ALTER TABLE `mdc_arrestrecords`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `mdc_broadcasts`
+-- Indeks untuk tabel `mdc_broadcasts`
 --
 ALTER TABLE `mdc_broadcasts`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `mdc_charges`
+-- Indeks untuk tabel `mdc_charges`
 --
 ALTER TABLE `mdc_charges`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `mdc_warrants`
+-- Indeks untuk tabel `mdc_warrants`
 --
 ALTER TABLE `mdc_warrants`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `newsstands`
+-- Indeks untuk tabel `newsstands`
 --
 ALTER TABLE `newsstands`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `phone_contacts`
+-- Indeks untuk tabel `phone_contacts`
 --
 ALTER TABLE `phone_contacts`
   ADD PRIMARY KEY (`contactID`);
 
 --
--- Indexes for table `pilkada_voters`
+-- Indeks untuk tabel `pilkada_voters`
 --
 ALTER TABLE `pilkada_voters`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `player_bans`
+-- Indeks untuk tabel `player_bans`
 --
 ALTER TABLE `player_bans`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `player_characters`
+-- Indeks untuk tabel `player_characters`
 --
 ALTER TABLE `player_characters`
   ADD PRIMARY KEY (`pID`);
 
 --
--- Indexes for table `player_clothes`
+-- Indeks untuk tabel `player_clothes`
 --
 ALTER TABLE `player_clothes`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `player_fishes`
+-- Indeks untuk tabel `player_fishes`
 --
 ALTER TABLE `player_fishes`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `player_phones`
+-- Indeks untuk tabel `player_phones`
 --
 ALTER TABLE `player_phones`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `player_toys`
+-- Indeks untuk tabel `player_toys`
 --
 ALTER TABLE `player_toys`
   ADD PRIMARY KEY (`Id`),
   ADD UNIQUE KEY `id` (`Owner`);
 
 --
--- Indexes for table `player_twitter`
+-- Indeks untuk tabel `player_twitter`
 --
 ALTER TABLE `player_twitter`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `player_ucp`
+-- Indeks untuk tabel `player_ucp`
 --
 ALTER TABLE `player_ucp`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `player_vehicles`
+-- Indeks untuk tabel `player_vehicles`
 --
 ALTER TABLE `player_vehicles`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `player_warns`
+-- Indeks untuk tabel `player_warns`
 --
 ALTER TABLE `player_warns`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `player_weapons`
+-- Indeks untuk tabel `player_weapons`
 --
 ALTER TABLE `player_weapons`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `public_garages`
+-- Indeks untuk tabel `public_garages`
 --
 ALTER TABLE `public_garages`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `redeem`
+-- Indeks untuk tabel `redeem`
 --
 ALTER TABLE `redeem`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `rentals`
+-- Indeks untuk tabel `rentals`
 --
 ALTER TABLE `rentals`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `roadsigns`
+-- Indeks untuk tabel `roadsigns`
 --
 ALTER TABLE `roadsigns`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `robberies`
+-- Indeks untuk tabel `robberies`
 --
 ALTER TABLE `robberies`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `rusun`
+-- Indeks untuk tabel `rusun`
 --
 ALTER TABLE `rusun`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `rusun_brankas`
+-- Indeks untuk tabel `rusun_brankas`
 --
 ALTER TABLE `rusun_brankas`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `salary`
+-- Indeks untuk tabel `salary`
 --
 ALTER TABLE `salary`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `shops`
+-- Indeks untuk tabel `shops`
 --
 ALTER TABLE `shops`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `speedcam`
+-- Indeks untuk tabel `speedcam`
 --
 ALTER TABLE `speedcam`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `stuffs`
+-- Indeks untuk tabel `stuffs`
 --
 ALTER TABLE `stuffs`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `vaults`
+-- Indeks untuk tabel `vaults`
 --
 ALTER TABLE `vaults`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `vehicle_bagasi`
+-- Indeks untuk tabel `vehicle_bagasi`
 --
 ALTER TABLE `vehicle_bagasi`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `vehicle_holster`
+-- Indeks untuk tabel `vehicle_holster`
 --
 ALTER TABLE `vehicle_holster`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `vendings`
+-- Indeks untuk tabel `vendings`
 --
 ALTER TABLE `vendings`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `vtoys`
+-- Indeks untuk tabel `vtoys`
 --
 ALTER TABLE `vtoys`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `whatsapp_chats`
+-- Indeks untuk tabel `whatsapp_chats`
 --
 ALTER TABLE `whatsapp_chats`
   ADD PRIMARY KEY (`chatID`);
 
 --
--- Indexes for table `whitelists`
+-- Indeks untuk tabel `whitelists`
 --
 ALTER TABLE `whitelists`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `xmas_trees`
+-- Indeks untuk tabel `xmas_trees`
 --
 ALTER TABLE `xmas_trees`
   ADD PRIMARY KEY (`ID`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `admin_logs`
+-- AUTO_INCREMENT untuk tabel `admin_logs`
 --
 ALTER TABLE `admin_logs`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `avtreasure`
+-- AUTO_INCREMENT untuk tabel `avtreasure`
 --
 ALTER TABLE `avtreasure`
-  MODIFY `ID` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `badside_brankas`
+-- AUTO_INCREMENT untuk tabel `badside_brankas`
 --
 ALTER TABLE `badside_brankas`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `damagelogs`
+-- AUTO_INCREMENT untuk tabel `damagelogs`
 --
 ALTER TABLE `damagelogs`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=165;
 
 --
--- AUTO_INCREMENT for table `demand_vehicles`
+-- AUTO_INCREMENT untuk tabel `demand_vehicles`
 --
 ALTER TABLE `demand_vehicles`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT for table `dropped_items`
+-- AUTO_INCREMENT untuk tabel `dropped_items`
 --
 ALTER TABLE `dropped_items`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `faction_brankas`
+-- AUTO_INCREMENT untuk tabel `faction_brankas`
 --
 ALTER TABLE `faction_brankas`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `faction_logs`
+-- AUTO_INCREMENT untuk tabel `faction_logs`
 --
 ALTER TABLE `faction_logs`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `faction_vaultlogs`
+-- AUTO_INCREMENT untuk tabel `faction_vaultlogs`
 --
 ALTER TABLE `faction_vaultlogs`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `gudang_brankas`
+-- AUTO_INCREMENT untuk tabel `gudang_brankas`
 --
 ALTER TABLE `gudang_brankas`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `house_brankas`
+-- AUTO_INCREMENT untuk tabel `house_brankas`
 --
 ALTER TABLE `house_brankas`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `house_holster`
+-- AUTO_INCREMENT untuk tabel `house_holster`
 --
 ALTER TABLE `house_holster`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `inventory`
+-- AUTO_INCREMENT untuk tabel `inventory`
 --
 ALTER TABLE `inventory`
-  MODIFY `invent_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
+  MODIFY `invent_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
 
 --
--- AUTO_INCREMENT for table `invoices`
+-- AUTO_INCREMENT untuk tabel `invoices`
 --
 ALTER TABLE `invoices`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `mdc_arrestrecords`
+-- AUTO_INCREMENT untuk tabel `mdc_arrestrecords`
 --
 ALTER TABLE `mdc_arrestrecords`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `mdc_broadcasts`
+-- AUTO_INCREMENT untuk tabel `mdc_broadcasts`
 --
 ALTER TABLE `mdc_broadcasts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `mdc_charges`
+-- AUTO_INCREMENT untuk tabel `mdc_charges`
 --
 ALTER TABLE `mdc_charges`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `mdc_warrants`
+-- AUTO_INCREMENT untuk tabel `mdc_warrants`
 --
 ALTER TABLE `mdc_warrants`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `phone_contacts`
+-- AUTO_INCREMENT untuk tabel `phone_contacts`
 --
 ALTER TABLE `phone_contacts`
   MODIFY `contactID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `pilkada_voters`
+-- AUTO_INCREMENT untuk tabel `pilkada_voters`
 --
 ALTER TABLE `pilkada_voters`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `player_bans`
+-- AUTO_INCREMENT untuk tabel `player_bans`
 --
 ALTER TABLE `player_bans`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `player_characters`
+-- AUTO_INCREMENT untuk tabel `player_characters`
 --
 ALTER TABLE `player_characters`
-  MODIFY `pID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `pID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `player_clothes`
+-- AUTO_INCREMENT untuk tabel `player_clothes`
 --
 ALTER TABLE `player_clothes`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `player_fishes`
+-- AUTO_INCREMENT untuk tabel `player_fishes`
 --
 ALTER TABLE `player_fishes`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `player_phones`
+-- AUTO_INCREMENT untuk tabel `player_phones`
 --
 ALTER TABLE `player_phones`
-  MODIFY `ID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `player_toys`
+-- AUTO_INCREMENT untuk tabel `player_toys`
 --
 ALTER TABLE `player_toys`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `player_twitter`
+-- AUTO_INCREMENT untuk tabel `player_twitter`
 --
 ALTER TABLE `player_twitter`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `player_ucp`
+-- AUTO_INCREMENT untuk tabel `player_ucp`
 --
 ALTER TABLE `player_ucp`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `player_vehicles`
+-- AUTO_INCREMENT untuk tabel `player_vehicles`
 --
 ALTER TABLE `player_vehicles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT for table `player_warns`
+-- AUTO_INCREMENT untuk tabel `player_warns`
 --
 ALTER TABLE `player_warns`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `player_weapons`
+-- AUTO_INCREMENT untuk tabel `player_weapons`
 --
 ALTER TABLE `player_weapons`
-  MODIFY `ID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `rusun_brankas`
+-- AUTO_INCREMENT untuk tabel `rusun_brankas`
 --
 ALTER TABLE `rusun_brankas`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `salary`
+-- AUTO_INCREMENT untuk tabel `salary`
 --
 ALTER TABLE `salary`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `vehicle_bagasi`
+-- AUTO_INCREMENT untuk tabel `vehicle_bagasi`
 --
 ALTER TABLE `vehicle_bagasi`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `vehicle_holster`
+-- AUTO_INCREMENT untuk tabel `vehicle_holster`
 --
 ALTER TABLE `vehicle_holster`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `vtoys`
+-- AUTO_INCREMENT untuk tabel `vtoys`
 --
 ALTER TABLE `vtoys`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `whatsapp_chats`
+-- AUTO_INCREMENT untuk tabel `whatsapp_chats`
 --
 ALTER TABLE `whatsapp_chats`
   MODIFY `chatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `whitelists`
+-- AUTO_INCREMENT untuk tabel `whitelists`
 --
 ALTER TABLE `whitelists`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
