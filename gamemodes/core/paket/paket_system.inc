@@ -127,8 +127,6 @@ CMD:findpaket(playerid, params[])
 
     return SendClientMessage(playerid, COLOR_RED,
     "[ILEGAL] Saat ini belum ada paket ilegal.");
-
-    return 1;
 }
 
 CMD:sellpaket(playerid, params[])
